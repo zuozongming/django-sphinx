@@ -32,7 +32,7 @@ def relative_path(*args):
     return os.path.abspath(os.path.join(settings.SPHINX_ROOT, *args))
 
 context = {
-    'SPHINX_HOST': getattr(settings, 'SPHINX_HOST', '127.0.0.1'),
+    'SPHINX_SERVER': getattr(settings, 'SPHINX_HOST', '127.0.0.1'),
     'SPHINX_PORT': getattr(settings, 'SPHINX_PORT', '3312'),
     'relative_path': relative_path,
 }
